@@ -687,3 +687,19 @@ export default function SMSSetup({
                   onClick={() => {
                     setSetupComplete(false)
                     setCurrentStep(3)
+                  }}
+                  className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-lg font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors"
+                >
+                  <CogIcon className="h-4 w-4" />
+                  {t('sms.change_settings', 'Change Settings')}
+                </button>
+              </div>
+            </div>
+          ) : (
+            renderStep()
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
